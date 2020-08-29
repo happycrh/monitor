@@ -91,6 +91,10 @@ Warning: Unresolved Symbol: sun.gc.compressedclassspace.used substituted NaN
 jstat -gc <pid> 1000 10
 以下大小的单位均为 KB
 S0C, S1C, S0U, S1U: S0和 S1的总量和使用量
+ S0C：年轻代中第一个survivor（幸存区）的容量 (字节) 
+ S1C：年轻代中第二个survivor（幸存区）的容量 (字节) 
+ S0U：年轻代中第一个survivor（幸存区）目前已使用空间 (字节) 
+ S1U：年轻代中第二个survivor（幸存区）目前已使用空间 (字节) 
 EC, EU: Eden区总量与使用量
 OC, OU: Old区总量与使用量
 MC, MU: Metacspace区(jdk1.8前为 PermGen)总量与使用量

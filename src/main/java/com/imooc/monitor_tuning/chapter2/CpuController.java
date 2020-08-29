@@ -24,8 +24,8 @@ public class CpuController {
 	/**
 	 * 死锁
 	 * */
-	@RequestMapping("/deadlock")
-	public String deadlock(){
+	@RequestMapping("/deadlock333")
+	public String deadlock333(){
 		new Thread(()->{
 			synchronized(lock1) {
 				try {Thread.sleep(1000);}catch(Exception e) {}
@@ -42,7 +42,7 @@ public class CpuController {
 				}
 			}
 		}) .start();
-		return "deadlock";
+		return "deadlock333";
 	}
 	public static List<Long> getPartneridsFromJson(String data){  
 	    //{\"data\":[{\"partnerid\":982,\"count\":\"10000\",\"cityid\":\"11\"},{\"partnerid\":983,\"count\":\"10000\",\"cityid\":\"11\"},{\"partnerid\":984,\"count\":\"10000\",\"cityid\":\"11\"}]}  

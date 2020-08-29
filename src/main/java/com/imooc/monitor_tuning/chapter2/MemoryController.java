@@ -23,7 +23,11 @@ public class MemoryController {
 			userList.add(new User(i++, UUID.randomUUID().toString()));
 		}
 	}
-	
+	@GetMapping("/heap22")
+	public String heap22() {
+		System.out.println(123456789);
+		return "1221321";
+	}
 	
 	/**
 	 * -XX:MetaspaceSize=32M -XX:MaxMetaspaceSize=32M

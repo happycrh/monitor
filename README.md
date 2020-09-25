@@ -85,6 +85,14 @@ Warning: Unresolved Symbol: sun.gc.metaspace.capacity substituted NaN
 Warning: Unresolved Symbol: sun.gc.metaspace.used substituted NaN
 Warning: Unresolved Symbol: sun.gc.compressedclassspace.capacity substituted NaN
 Warning: Unresolved Symbol: sun.gc.compressedclassspace.used substituted NaN
+-Xmx300M -Xms300M -XX:NewRatio=2 -XX:SurvivorRatio=8
+-Xmx最大堆内存 -Xms初始化堆内存 -XX:NewRatio=2表示新生代内存比老年代内存大小比为(9728.0+9728.0+82944.0):204800=1:2
+-XX:SurvivorRatio=8表示新生代中的eden区与幸存者区的比例为82944:9728:9728=8:1:1
+ S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT
+9728.0 9728.0  0.0   9572.2 82944.0   6866.6   204800.0   66454.9   76080.0 72424.1 10288.0 9626.1     45    0.206   3      0.262    0.469
+9728.0 9728.0  0.0   9572.2 82944.0   6866.6   204800.0   66454.9   76080.0 72424.1 10288.0 9626.1     45    0.206   3      0.262    0.469
+
+
  S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT
 1600.0 1600.0  0.0   1600.0 13184.0   7779.2   32696.0    22669.8     -      -      -      -       117    1.056   5      0.386    1.441
 -gc, -gcutil, -gccause, -gcnew, -gcold
